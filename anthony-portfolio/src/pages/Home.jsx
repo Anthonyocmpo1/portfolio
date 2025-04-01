@@ -1,26 +1,38 @@
-import myImage from "../assets/Image.jpeg"; // Replace with the correct image path
+import { motion } from "framer-motion";
+import { FaEnvelope, FaGithub } from "react-icons/fa";
 
 const Home = () => {
   return (
-    <div className="home-container">
-      <div className="content">
-        <img src={myImage} alt="Anthony Mwaura" className="profile-image" />
-        <h1>Anthony Mwaura</h1>
-        <h2>Full-Stack Software Engineer</h2>
-        <p>Software Engineer | Frontend & Backend Developer</p>
-        
-        <div className="skills">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Python</span>
-          <span>React</span>
-          <span>Flask</span>
+    <div className="flex justify-center items-center h-screen bg-[#0e1129] text-white">
+      <div className="text-center">
+        <h1 className="text-5xl font-bold">
+          Hey <span className="inline-block animate-waving-hand">👋</span> I'm Anthony
+        </h1>
+        <h2 className="text-xl text-yellow-400 font-semibold mt-3">
+          Full Stack Web Developer / Software Engineer
+        </h2>
+        <p className="text-gray-400 mt-4 max-w-lg mx-auto">
+          I'm an advocate for building responsive, accessible, and inclusive digital products and experiences for the web.
+        </p>
+        <div className="mt-6 flex justify-center gap-4">
+          <motion.a
+            href="mailto:mwauraa634@gmail.com"
+            className="flex items-center gap-2 border border-yellow-400 px-4 py-2 rounded-lg text-yellow-400 hover:bg-yellow-400 hover:text-black"
+            whileHover={{ scale: 1.1 }}
+          >
+            <FaEnvelope /> Get in Touch
+          </motion.a>
+          <motion.a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 border border-yellow-400 px-4 py-2 rounded-lg text-yellow-400 hover:bg-yellow-400 hover:text-black"
+            whileHover={{ scale: 1.1 }}
+          >
+            <FaGithub /> Github
+          </motion.a>
         </div>
 
-        <p>Graduated from <strong>Moringa School</strong>, passionate about building scalable web applications.</p>
-
-        <a href="#projects" className="btn">Press next</a>
       </div>
     </div>
   );

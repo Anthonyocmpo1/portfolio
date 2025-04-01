@@ -25,13 +25,7 @@ const Book = () => {
         </div>
       ))}
 
-      {/* Navigation Buttons */}
-      <button className="prev-button" onClick={prevPage} disabled={page === 0}>
-        ← Previous
-      </button>
-      <button className="next-button" onClick={nextPage}>
-        Next →
-      </button>
+      
     </div>
   );
 };
